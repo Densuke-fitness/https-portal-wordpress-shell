@@ -12,6 +12,7 @@ services:
     restart: always
     environment:
       STAGE: local
+      DOMAINS: 'wordpress.example.com -> http://wordpress:80'
 
   wordpress:
     image: wordpress
