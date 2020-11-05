@@ -9,9 +9,9 @@ Host_name="wordpress.example.com"
 
 grep "${ip_address} ${Host_name}" /etc/hosts
 if [ $? = 0 ]; then
-	echo "/etc/hostsに ${ip_address} ${Host_name} が記載されているため追加しませんでした。"
+    echo "/etc/hostsに ${ip_address} ${Host_name} が記載されているため追加しませんでした。"
 else
-	echo "/etc/hostsに ${ip_address} ${Host_name} を追加します"
+    echo "/etc/hostsに ${ip_address} ${Host_name} を追加します"
     echo "パスワードを入力してください"
     Sudo -- sh -c -e "echo '${ip_address} ${Host_name}' >> /etc/hosts";
     echo "/etc/hostsに ${ip_address} ${Host_name} を追加しました"
